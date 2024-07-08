@@ -16,8 +16,8 @@ import { WebsocketService } from '../web-socket.service';
 export class ChatComponent implements OnInit {
 refresh(chatid:string){
 
-  window.location.reload();
   window.location.href="chat/"+chatid;
+  this.loadchats({params:{params:{user:chatid}}})
 }
   @ViewChild('messageContainer')
   private messageContainer!: ElementRef;
